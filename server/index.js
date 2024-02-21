@@ -14,7 +14,7 @@ app.use("/files",express.static("files"));
 
 app.use(cors(
   {  
-    origin: ["https://SDP_deploy-client.varcel.app"],
+    origin: [""],
     methods: ["POST","GET"],
     credentials: true
   }
