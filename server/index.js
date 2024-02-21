@@ -12,14 +12,6 @@ app.use(express.json());
 require("dotenv").config();
 app.use("/files",express.static("files"));
 
-app.use(cors(
-  {  
-    origin: ["https://sdp-deploy-client.vercel.app"],
-    methods: ["POST","GET"],
-    credentials: true
-  }
-));
-
 // mongoose.connect('mongodb://127.0.0.1:27017/Login');
 
 // const StudentSchema = new mongoose.Schema({

@@ -1,4 +1,4 @@
-export const host = "sdp-deploy-api.vercel.app";
+export const host = "http://localhost:3001";
 export const loginRoute = `${host}/api/auth/login`;
 export const marksAttendanceRoute = `${host}/api/auth/addMarksAttendance`;
 export const getMarksAttendanceRoute = `${host}/api/auth/getMarksAttendance`;
