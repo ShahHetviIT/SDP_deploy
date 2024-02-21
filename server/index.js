@@ -7,7 +7,6 @@ const classroomRoute = require("./routes/classroomRoute");
 // const files = require("./routes/files");
 const socket = require("socket.io");
 const app = express();
-const path = require("path");
 app.use(cors());
 app.use(express.json());
 require("dotenv").config();
@@ -51,14 +50,13 @@ app.use("/files",express.static("files"));
 //         });
 // });
 
-app.listen(3000, () => {
-    console.log("Server is running");
-});
+// app.listen(3001, () => {
+//     console.log("Server is running");
+// });
 
 app.use("/api/auth", loginRoute);
 app.use("/api/messages", messageRoute);
 app.use("/api/classroom", classroomRoute);
-
 // app.use("",files);
 
 // const multer  = require('multer');
@@ -81,14 +79,8 @@ app.use("/api/classroom", classroomRoute);
 //   res.send("hii");
 // })
 
-// app.get("/", async (req, res) => {
-//   res.send("Success!!!!!!");
-// });
-
-app.use(express.static(path.resolve(__dirname, "client", "build")));
-
-app.get("/", (req, res) => {
-  app.use(express.static(path.resolve(__dirname, "client", "build")));
+app.get("/", async (req, res) => {
+  res.send("Success!!!!!!");
 });
 
 mongoose
