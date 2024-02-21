@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MentorMingle from "../../assets/mentor-mingle.png"
 import Logout from "../Logout";
+import {host} from "../../utils/APIRoutes";
 
 export default function DashboardNavbar() {
   const [currentUserName, setCurrentUserName] = useState(undefined);
@@ -49,7 +50,7 @@ export default function DashboardNavbar() {
               <div className="avatar">
                 <img
                   className="avatarImage"
-                  src={`http://localhost:3001/files/${currentUserImage}`}
+                  src={`${host}/files/${currentUserImage}`}
                   alt="avatar"
                 />
               </div>

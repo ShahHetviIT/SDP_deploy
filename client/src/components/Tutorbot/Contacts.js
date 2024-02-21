@@ -183,6 +183,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import TutorBot from "../../assets/totorbot.png";
+import {host} from "../../utils/APIRoutes";
 
 export default function Contacts({
   teacherContacts,
@@ -277,7 +278,7 @@ export default function Contacts({
                         <div className="avatar">
                           <img
                             className="userProfile"
-                            src={`http://localhost:3001/files/${contact.profileImage}`}
+                            src={`${host}/files/${contact.profileImage}`}
                             alt="avatar"
                           />
                         </div>
@@ -327,7 +328,7 @@ export default function Contacts({
                         <div className="avatar">
                           <img
                             className="userProfile"
-                            src={`http://localhost:3001/files/${contact.profileImage}`}
+                            src={`${host}/files/${contact.profileImage}`}
                             alt="avatar"
                           />
                         </div>
@@ -354,7 +355,7 @@ export default function Contacts({
                 <div className="avatar">
                   <img
                     className="userProfile"
-                    src={`http://localhost:3001/files/${currentUserProfile}`}
+                    src={`${host}/files/${currentUserProfile}`}
                     alt="avatar"
                   />
                 </div>

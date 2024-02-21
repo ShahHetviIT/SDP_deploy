@@ -11,6 +11,7 @@ import { SiGoogleclassroom } from "react-icons/si";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { RxCross1 } from "react-icons/rx";
+import {getClassroomDetailsRoute} from "../../utils/APIRoutes";
 
 
 const Navbar = ({ show,toggleNavbar }) => {
@@ -19,7 +20,7 @@ const Navbar = ({ show,toggleNavbar }) => {
   useEffect(() => {
     const fetchClassname = async () => {
       try {
-        const response = await axios.post("http://localhost:3001/api/classroom/getClassroomDetails");
+        const response = await axios.post(getClassroomDetailsRoute);
         console.log(response.data);
         setEnrolled(response.data);
       } catch (error) {

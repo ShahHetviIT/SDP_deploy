@@ -11,4 +11,9 @@ export const allUsersRouteStudents = `${host}/api/auth/alluserstudent`;
 export const getCurrentStudentRoute = `${host}/api/auth/getCurrentStudent`;
 export const sendMessageRoute = `${host}/api/messages/addmsg`;
 export const recieveMessageRoute = `${host}/api/messages/getmsg`;
-
+export const getFilesClassroom =`${host}/api/classroom/get-files`;
+export const getClassroomDetailsRoute = `${host}/api/classroom/getClassroomDetails`;
+export const addClassroomDetailsRoute = `${host}/api/classroom/addClassroomDetails`;
+export const uploadFilesClassroom = `${host}/api/classroom/upload-files`;
+export const getFilesMessages = `${host}/api/messages/get-files`;
+export const uploadFilesMessages = `${host}/api/messages/upload-files`;

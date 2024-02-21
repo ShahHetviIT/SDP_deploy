@@ -117,6 +117,7 @@ import { AppBar, Button, Dialog, DialogActions, DialogContent, TextField, Toolba
 import Announcement from './Announcement';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
+import {uploadFilesClassroom,host} from '../../utils/APIRoutes';
 
 function Stream() {
   const [selectedClassroom, setSelectedClassroom] = useState(null);
@@ -180,7 +181,7 @@ function Stream() {
       formData.append("classId", data._id);
 
       const response = await axios.post(
-        'http://localhost:3001/api/classroom/upload-files',
+        uploadFilesClassroom,
         formData,
         {
           headers: {
@@ -218,7 +219,7 @@ function Stream() {
               <div className="avatar">
                 <img
                   className="avatarImage"
-                  src={`http://localhost:3001/files/${currentUserImage}`}
+                  src={`${host}/files/${currentUserImage}`}
                   alt="avatar"
                 />
               </div>

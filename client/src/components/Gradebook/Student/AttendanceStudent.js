@@ -3,7 +3,7 @@ import Sessional1 from "./Sessional1";
 import Sessional2 from "./Sessional2";
 import Sessional3 from "./Sessional3";
 import "../../../style/Attendance.css";
-import { getCurrentStudentRoute } from "../../../utils/APIRoutes";
+import { getCurrentStudentRoute,host } from "../../../utils/APIRoutes";
 import axios from "axios";
 import Gradebook from "../../../assets/gradebook.png";
 import Logout from "../../Logout";
@@ -91,7 +91,7 @@ export default function AttendanceStudent() {
               <div className="avatar">
                 <img
                   className="avatarImage"
-                  src={`http://localhost:3001/files/${currentUserImage}`}
+                  src={`${host}/files/${currentUserImage}`}
                   alt="avatar"
                 />
               </div>

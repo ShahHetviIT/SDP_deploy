@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { setProfileImageRoute } from "../../utils/APIRoutes";
+import { setProfileImageRoute,host } from "../../utils/APIRoutes";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -64,7 +64,7 @@ export default function SetProfileImage() {
           <div className="uploaded-image">
             <img
               className="image"
-              src={`http://localhost:3001/files/${imageURL}`}
+              src={`${host}/files/${imageURL}`}
               alt="Uploaded Profile"
             />
           </div>

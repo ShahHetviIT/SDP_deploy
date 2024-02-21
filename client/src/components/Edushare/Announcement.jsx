@@ -126,6 +126,7 @@ import Avatar from '@mui/material/Avatar';
 import axios from 'axios';
 import '../../style/Announcement.css';
 import { Divider } from '@mui/material';
+import {getFilesClassroom,host} from '../../utils/APIRoutes';
 
 const Announcement = ({ updateMaterials }) => {
   const [material, setMaterial] = useState([]);
@@ -140,7 +141,7 @@ const Announcement = ({ updateMaterials }) => {
     try {
       const details = JSON.parse(sessionStorage.getItem("classroom-details"));
       const userId = details._id;
-      const result = await axios.get(`http://localhost:3001/api/classroom/get-files/${userId}`);
+      const result = await axios.get(`${getFilesClassroom}/${userId}`);
       setMaterial(result.data.data);
     } catch (error) {
       console.error("Error fetching PDF files:", error);
@@ -152,7 +153,7 @@ const Announcement = ({ updateMaterials }) => {
   }, [updateMaterials]); // Run the effect whenever updateMaterials changes
 
   const showPdf = (pdfUrl, description) => {
-    window.open(`http://localhost:3001/files/${pdfUrl}`, "blank", "noreference");
+    window.open(`${host}/files/${pdfUrl}`, "_blank", "noreferrer");
     console.log(description);
   };
 

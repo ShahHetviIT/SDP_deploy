@@ -6,6 +6,7 @@ import axios from "axios";
 import { sendMessageRoute, recieveMessageRoute } from "../../utils/APIRoutes";
 import { v4 as uuidv4 } from "uuid";
 import { Link } from "react-router-dom";
+import {getFilesMessages,host} from "../../utils/APIRoutes";
 
 export default function ChatContainer({ currentChat, currentUser, socket }) {
   const [messages, setMessages] = useState([]);
@@ -90,7 +91,7 @@ export default function ChatContainer({ currentChat, currentUser, socket }) {
   // Correct
   const getPdf = async () => {
     const result = await axios.get(
-      "http://localhost:3001/api/messages/get-files"
+      getFilesMessages
     );
     console.log(result.data.data);
     setAllImage(result.data.data);
@@ -98,7 +99,7 @@ export default function ChatContainer({ currentChat, currentUser, socket }) {
 
   const showPdf = (pdf) => {
     console.log(pdf);
-    window.open(`http://localhost:3001/files/${pdf}`, "_blank", "noreferrer");
+    window.open(`${host}/files/${pdf}`, "_blank", "noreferrer");
   };
 
   const handleSendMsg = async (msg) => {
@@ -177,7 +178,7 @@ export default function ChatContainer({ currentChat, currentUser, socket }) {
                 <div className="avatar">
                   <img
                     className="userProfile"
-                    src={`http://localhost:3001/files/${currentChat.profileImage}`}
+                    src={`${host}/files/${currentChat.profileImage}`}
                     alt="avatar"
                   />
                 </div>

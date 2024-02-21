@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CgProfile } from "react-icons/cg";
 import Createroom from './Createroom';
+import {host} from '../../utils/APIRoutes';
 //import Createroom from './Createroom';
 //import Plus from './Plus';
 export default function Header() {
@@ -64,7 +65,7 @@ export default function Header() {
               <div className="avatar">
                 <img
                   className="avatarImage"
-                  src={`http://localhost:3001/files/${currentUserImage}`}
+                  src={`${host}/files/${currentUserImage}`}
                   alt="avatar"
                 />
               </div>

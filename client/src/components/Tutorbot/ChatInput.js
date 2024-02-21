@@ -4,6 +4,7 @@ import { IoMdSend } from "react-icons/io";
 import styled from "styled-components";
 import Picker from "emoji-picker-react";
 import axios from "axios";
+import {uploadFilesMessages} from "../../utils/APIRoutes";
 // import getSocket from "../components/ChatContainer";
 
 export default function ChatInput({ handleSendMsg, currentChat, getSocket }) {
@@ -52,7 +53,7 @@ export default function ChatInput({ handleSendMsg, currentChat, getSocket }) {
     // handleSendMsg(formData);
 
     const result = await axios.post(
-      "http://localhost:3001/api/messages/upload-files",
+      uploadFilesMessages,
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },

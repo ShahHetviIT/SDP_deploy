@@ -9,6 +9,7 @@ import { FaPlus } from 'react-icons/fa';
 import axios from 'axios';
 import { fetchData } from './Classcard';
 import { useNavigate } from 'react-router-dom';
+import {addClassroomDetailsRoute} from "../../utils/APIRoutes";
 
 
 export default function Createroom() {
@@ -42,9 +43,8 @@ export default function Createroom() {
     console.log(teacher);
 
     try {
-      const host = "http://localhost:3001";
-      const classPost = `${host}/api/classroom/addClassroomDetails`;
-      const result = await axios.post(classPost, {
+      
+      const result = await axios.post(addClassroomDetailsRoute, {
         classRoom,
         subject,
         teacher,

@@ -130,11 +130,12 @@ import { BsPersonWorkspace } from "react-icons/bs";
 import '../../style/Classcard.css';
 import { Divider } from '@mui/material';
 import data from '../../data/data';
+import {getClassroomDetailsRoute} from "../../utils/APIRoutes"
 
 export const fetchData = async () => {
   console.log("fetchData");
   try {
-    const response = await axios.post("http://localhost:3001/api/classroom/getClassroomDetails");
+    const response = await axios.post(getClassroomDetailsRoute);
     console.log(response.data);
     return response.data;
   } catch (error) {

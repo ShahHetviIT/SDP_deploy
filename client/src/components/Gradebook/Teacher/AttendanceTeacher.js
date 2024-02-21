@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import {
   allUsersRouteStudents,
   getTeacherSubjectRoute,
+  host
 } from "../../../utils/APIRoutes";
 import Sessional1 from "./Sessional1";
 import Sessional2 from "./Sessional2";
@@ -148,7 +149,7 @@ export default function AttendanceTeacher() {
               <div className="avatar">
                 <img
                   className="avatarImage"
-                  src={`http://localhost:3001/files/${currentUserImage}`}
+                  src={`${host}/files/${currentUserImage}`}
                   alt="avatar"
                 />
               </div>
