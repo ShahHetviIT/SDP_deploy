@@ -1,0 +1,91 @@
+/* .amt {
+    background-color: #fff;
+    border: 0.0625rem solid #dadce0;
+    -webkit-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+  .amt__top {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 19px;
+  }
+  .amt__top > * {
+    margin-left: 10px;
+  }
+  .amt__Cnt {
+    padding: 0.5rem 0;
+  }
+  .amt__txt {
+    margin: 10px 15px;
+  }
+  */
+  /* Default styles for all announcements */
+.amt {
+  border: 1px solid #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.no-announcements {
+  align-items: center;
+  font-size: 17px;
+  display: flex;
+  color: #1967d2;
+  height: 150px;
+  justify-content: center;
+}
+
+.date{
+  font-size: 15px;
+}
+/* Styles specific to math announcements */
+.amt.math {
+  background-color: #f0f0f0;
+}
+
+/* Styles specific to history announcements */
+.amt.history {
+  background-color: #e0e0e0;
+}
+
+/* Add more styles for other categories as needed */
+
+  
+  .amt__Cnt {
+    display: flex;
+    flex-direction: column;
+    padding: 0,0,0,5px;
+    color: #1967d2;
+  }
+  
+  .amt__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  
+  .amt__top button {
+    margin: 0;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: max-content;
+  }
+  
+  .amt__top button:hover {
+    background-color: #0056b3;
+  }
+  
+  .avatar {
+    margin-right: 10px;
+  }
+  

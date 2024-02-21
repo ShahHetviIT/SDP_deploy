@@ -1,0 +1,243 @@
+@font-face {
+  font-family: "Muli-Regular";
+  src: url("../fonts/muli/Muli-Regular.ttf");
+}
+@font-face {
+  font-family: "Muli-SemiBold";
+  src: url("../fonts/muli/Muli-SemiBold.ttf");
+}
+
+.card1 {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  color: black;
+}
+
+.tableRow td:first-child {
+  font-weight: bold;
+  width: 30%;
+  text-align: end;
+}
+
+.tableRow td:nth-child(2) {
+  text-align: start;
+}
+
+
+/* In a CSS file or a style block in your component */
+.tableRow:nth-child(odd) {
+ background-color: #99ccff;
+}
+
+
+.container-body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
+.sidebar {
+  width: 250px; /* Adjust the width as needed */
+  background-color: #f0f0f0; /* Sidebar background color */
+  transition: width 0.3s ease; /* Smooth transition for opening and closing */
+  overflow-y: auto; /* Add vertical scrollbar if content exceeds height */
+  flex: 0 0 auto; /* Sidebar does not grow or shrink */
+  min-height: 100vh; /* Set maximum height to viewport height */
+}
+
+.btn {
+  width: max-content;
+  margin-top: 0;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.wid{
+  width: 14.286%;
+}
+
+th,
+td {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+/* th:first-child,
+td:first-child {
+  width: max-content; 
+}
+
+th:not(:first-child),
+td:not(:first-child) {
+  width: 70%; 
+} */
+
+td {
+  letter-spacing: 1px;
+  color: black;
+  text-align: center;
+}
+
+th {
+  letter-spacing: 1px;
+  color: white;
+  text-align: center;
+  background-color: #99ccff;
+}
+
+.studentName{
+  width: 17%;
+}
+
+.inp {
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.insideColumn {
+  padding: 0;
+}
+
+.sessionalButtons {
+  padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: wrap;
+    gap: 15px;
+
+  .btn {
+    background-color: #99ccff;
+    padding: 10px 20px;
+    border: none;
+    background: #99ccff;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Muli-SemiBold";
+    font-size: 15px;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn:active {
+    background: #99ccff;
+  }
+}
+
+.buttons{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    gap: 20px;
+}
+
+.saveBtn{
+  background-color: #99ccff;
+    padding: 10px 20px;
+    border: none;
+    background: #99ccff;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: "Muli-SemiBold";
+    font-size: 15px;
+    letter-spacing: 2px;
+    transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+.saveBtn:active{
+  background: #99ccff;
+}
+
+.current-user{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.avatarImage{
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: 50%;
+}
+
+.username{
+  h2{
+    color: white;
+    font-family: 'Muli-SemiBold';
+    font-size: 1.5em;
+  }
+}
+
+.image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+  font-family: Muli-SemiBold;
+  font-size: 1.8em;
+}
+
+.sessional{
+  padding: 0 20px;
+  h3{
+    color: black;
+    padding: 20px 10px 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Muli-Regular';
+    text-align: start;
+    margin: 0;
+    font-size: 1.3em;
+    
+  }
+}
+
+.line{
+  margin: 30px 0 10px;
+  border: 1.5px dashed #99ccff;
+}
+
+.gradebookTitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+
+  img{
+    height: 2.8rem;
+  }
+
+  div{
+    color: white;
+    font-size: 1.5em;
+    font-family: 'Muli-SemiBold';
+  }
+}
+

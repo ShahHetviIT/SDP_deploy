@@ -1,0 +1,4 @@
+.classcard{
+    display: flex;
+    flex-wrap: wrap;
+}
