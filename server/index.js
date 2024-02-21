@@ -85,9 +85,10 @@ app.use("/api/classroom", classroomRoute);
 //   res.send("Success!!!!!!");
 // });
 
+app.use(express.static(path.resolve(__dirname, "client", "build")));
+
 app.get("/", (req, res) => {
   app.use(express.static(path.resolve(__dirname, "client", "build")));
-  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
 });
 
 mongoose
