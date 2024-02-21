@@ -14,7 +14,7 @@ app.use("/files",express.static("files"));
 
 app.use(cors(
   {  
-    origin: ["https://sdp-deploy-client.vercel.app/"],
+    origin: ["https://sdp-deploy-client.vercel.app"],
     methods: ["POST","GET"],
     credentials: true
   }
