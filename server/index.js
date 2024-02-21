@@ -7,6 +7,13 @@ const classroomRoute = require("./routes/classroomRoute");
 // const files = require("./routes/files");
 const socket = require("socket.io");
 const app = express();
+app.use(cors(
+  {
+    origin: ["https://mentor-mingle-client.vercel.app"],
+    methods: ["POST","GET"],
+    credentials: true
+  }
+));
 app.use(cors());
 app.use(express.json());
 require("dotenv").config();
@@ -54,6 +61,9 @@ app.use("/files",express.static("files"));
 //     console.log("Server is running");
 // });
 
+// app.listen(3000, () => {
+//   console.log("client is running");
+// });
 app.use("/api/auth", loginRoute);
 app.use("/api/messages", messageRoute);
 app.use("/api/classroom", classroomRoute);
