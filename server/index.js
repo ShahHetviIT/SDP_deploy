@@ -7,13 +7,13 @@ const classroomRoute = require("./routes/classroomRoute");
 // const files = require("./routes/files");
 const socket = require("socket.io");
 const app = express();
-app.use(cors(
-  {
-    origin: ["https://mentor-mingle-client.vercel.app"],
-    methods: ["POST","GET"],
-    credentials: true
-  }
-));
+// app.use(cors(
+//   {
+//     origin: ["https://mentor-mingle-client.vercel.app"],
+//     methods: ["POST","GET"],
+//     credentials: true
+//   }
+// ));
 app.use(cors());
 app.use(express.json());
 require("dotenv").config();
